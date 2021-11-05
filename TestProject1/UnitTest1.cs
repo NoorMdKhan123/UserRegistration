@@ -6,27 +6,28 @@ namespace TestProject1
     [TestClass]
     public class UnitTest1
     {
+
+        //[TestMethod]
+        //Validating 1st Name
+        [DataRow("Noormd", "Noormd")]
+        [DataRow("No", "No")]
+        [DataRow("n", null)]
+        [DataRow("Noor05", null)]
+
+        public void ValidateFirstname(string a, string expected)
+        {
+
+            var actual = RegexSample.ValidatingFirstName(a);
+            Assert.AreEqual(expected, actual);
+        }
+        //Validating for Last Name
+        [TestMethod]
+        [DataRow("Khan", "Khan")]
+        [DataRow("Khan", null)]
+        [DataRow("NoorKhan", "NoorKhan")]
+        [DataRow("Noor05", null)]
         
-        //validation for first Name
-            [TestMethod]
-            [DataRow("Samath", "Samath")]
-            [DataRow("Sa", "Sa")]
-            [DataRow("s", null)]
-            [DataRow("Sama05", null)]
-
-            public void ValidateFirstname(string a, string expected)
-            {
-
-                var actual = RegexSample.ValidatingFirstName(a);
-                Assert.AreEqual(expected, actual);
-            }
-            //Validating for Last Name
-            [TestMethod]
-            [DataRow("Sethi", "Sethi")]
-            [DataRow("Sethi", null)]
-            [DataRow("SethiSamarth", "SethiSamarth")]
-            [DataRow("Samarth05", null)]
-            public void ValidateUserLastname(string a, string expected)
+        public void ValidateUserLastname(string a, string expected)
             {
                 var actual = RegexSample.ValidatingLastName(a);
                 Assert.AreEqual(expected, actual);
