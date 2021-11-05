@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 
 namespace UserRegistration
 {
@@ -6,7 +6,16 @@ namespace UserRegistration
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to user registration!");
+            bool result;
+        string firstName;
+
+
+        Pattern userRegistration = new Pattern();
+        Console.WriteLine("Enter first name : ");
+            firstName = Console.ReadLine();
+
+            result = Pattern.ValidateName(firstName);
+            Console.WriteLine(result);
         }
     }
 }
