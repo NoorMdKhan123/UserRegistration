@@ -7,7 +7,7 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             bool result;
-            string firstName;
+            string firstName; 
             string lastName;
             string useremail;
             string phone;
@@ -46,6 +46,8 @@ namespace UserRegistration
             result1 = userRegistration.Password(password);
             Console.WriteLine(result);
             Console.WriteLine("-----------");
+
+            EmailSamples.validateEmail();
         }
     }
 }
