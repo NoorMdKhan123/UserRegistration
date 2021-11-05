@@ -9,10 +9,10 @@ namespace TestProject1
         
         //validation for first Name
             [TestMethod]
-            [DataRow("Samath", "Samath")]
-            [DataRow("Sa", "Sa")]
-            [DataRow("s", null)]
-            [DataRow("Sama05", null)]
+            [DataRow("Noormd", "Noormd")]
+            [DataRow("No", "No")]
+            [DataRow("n", null)]
+            [DataRow("Noor05", null)]
 
             public void ValidateFirstname(string a, string expected)
             {
@@ -22,10 +22,10 @@ namespace TestProject1
             }
             //Validating for Last Name
             [TestMethod]
-            [DataRow("Sethi", "Sethi")]
-            [DataRow("Sethi", null)]
-            [DataRow("SethiSamarth", "SethiSamarth")]
-            [DataRow("Samarth05", null)]
+            [DataRow("Khan", "Khan")]
+            [DataRow("Khan", null)]
+            [DataRow("NoorKhan", "NoorKhan")]
+            [DataRow("Noor05", null)]
             public void ValidateUserLastname(string a, string expected)
             {
                 var actual = RegexSample.ValidatingLastName(a);
