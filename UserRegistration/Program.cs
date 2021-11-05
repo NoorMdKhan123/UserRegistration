@@ -11,6 +11,8 @@ namespace UserRegistration
             string lastName;
             string useremail;
             string phone;
+            string result1;
+            string password;
 
 
             UserRegistration userRegistration = new UserRegistration();
@@ -36,6 +38,12 @@ namespace UserRegistration
             Console.WriteLine("Enter the mobile number : ");
             phone = Console.ReadLine();
             result = userRegistration.PhoneNumberCheck(phone);
+            Console.WriteLine(result);
+            Console.WriteLine("-----------");
+
+            Console.WriteLine("Enter the password : ");
+            password = Console.ReadLine();
+            result1 = userRegistration.Password(password);
             Console.WriteLine(result);
             Console.WriteLine("-----------");
         }

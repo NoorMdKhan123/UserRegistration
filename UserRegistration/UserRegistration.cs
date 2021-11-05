@@ -31,5 +31,17 @@ namespace UserRegistration
             return Regex.IsMatch(phoneNumber, regExPattern2);
 
         }
-    }
+        public string regEx3 = "^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
+        public string Password(string password)
+        {
+            bool result = Regex.IsMatch(password, regEx3);
+            if (result)
+            {
+                return "password is correct";
+            }
+            else
+            {
+                return "passowrd incorrect";
+            }
+        }
 }
