@@ -10,6 +10,7 @@ namespace UserRegistration
             string firstName;
             string lastName;
             string useremail;
+            string phone;
 
 
             UserRegistration userRegistration = new UserRegistration();
@@ -29,6 +30,12 @@ namespace UserRegistration
             Console.WriteLine("Enter email");
             useremail = Console.ReadLine();
             result = userRegistration.UserEmailValidation(useremail);
+            Console.WriteLine(result);
+            Console.WriteLine("-----------");
+
+            Console.WriteLine("Enter the mobile number : ");
+            phone = Console.ReadLine();
+            result = userRegistration.PhoneNumberCheck(phone);
             Console.WriteLine(result);
             Console.WriteLine("-----------");
         }

@@ -24,5 +24,12 @@ namespace UserRegistration
         {
             return Regex.IsMatch(email, regExEmail);
         }
+        public string regExPattern2 = "^91?[0-9]{10}$";
+
+        public bool PhoneNumberCheck(string phoneNumber)
+        {
+            return Regex.IsMatch(phoneNumber, regExPattern2);
+
+        }
     }
 }
