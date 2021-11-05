@@ -9,6 +9,7 @@ namespace UserRegistration
             bool result;
             string firstName;
             string lastName;
+            string useremail;
 
 
             UserRegistration userRegistration = new UserRegistration();
@@ -22,6 +23,12 @@ namespace UserRegistration
             Console.WriteLine("Enter last name : ");
             lastName = Console.ReadLine();
             result = userRegistration.ValidateName(lastName);
+            Console.WriteLine(result);
+            Console.WriteLine("-----------");
+
+            Console.WriteLine("Enter email");
+            useremail = Console.ReadLine();
+            result = userRegistration.UserEmailValidation(useremail);
             Console.WriteLine(result);
             Console.WriteLine("-----------");
         }

@@ -17,5 +17,12 @@ namespace UserRegistration
         {
             return Regex.IsMatch(lastname, regExPattern);
         }
+        string regExEmail = "^(?=.{1,32}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-]" +
+            "[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
+
+        public bool UserEmailValidation(string email)
+        {
+            return Regex.IsMatch(email, regExEmail);
+        }
     }
 }
