@@ -31,7 +31,8 @@ namespace UserRegistration
             return Regex.IsMatch(phoneNumber, regExPattern2);
 
         }
-        public string regEx3 = "^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
+        public string regEx3 = "^(?=.*[A-Z]){8,}$";
+
         public string Password(string password)
         {
             bool result = Regex.IsMatch(password, regEx3);
@@ -44,4 +45,5 @@ namespace UserRegistration
                 return "passowrd incorrect";
             }
         }
+    }
 }
