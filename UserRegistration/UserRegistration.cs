@@ -31,7 +31,7 @@ namespace UserRegistration
             return Regex.IsMatch(phoneNumber, regExPattern2);
 
         }
-        public string regEx3 = "^(?=.*[A-Z]){8,}$";
+        public string regEx3 = "(?=.*[0-9])(?=.*[A-Z]).{8,20}$";
 
         public string Password(string password)
         {
