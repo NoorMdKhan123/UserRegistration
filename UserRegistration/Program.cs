@@ -7,15 +7,23 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             bool result;
-        string firstName;
+            string firstName;
+            string lastName;
 
 
-        Pattern userRegistration = new Pattern();
-        Console.WriteLine("Enter first name : ");
+            UserRegistration userRegistration = new UserRegistration();
+
+            Console.WriteLine("Enter first name : ");
             firstName = Console.ReadLine();
-
-            result = Pattern.ValidateName(firstName);
+            result = userRegistration.ValidateName(firstName);
             Console.WriteLine(result);
+            Console.WriteLine("-----------");
+
+            Console.WriteLine("Enter last name : ");
+            lastName = Console.ReadLine();
+            result = userRegistration.ValidateName(lastName);
+            Console.WriteLine(result);
+            Console.WriteLine("-----------");
         }
     }
 }
